@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fuel Variance</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+<h1>Fuel Sales</h1>
+
+<div class="card">
+
+<h3>Pump 1</h3>
+
+<input id="p1_open" placeholder="Opening Reading">
+<input id="p1_close" placeholder="Closing Reading">
+
+</div>
+
+
+<div class="card">
+
+<h3>Pump 2</h3>
+
+<input id="p2_open" placeholder="Opening Reading">
+<input id="p2_close" placeholder="Closing Reading">
+
+</div>
+
+
+<div class="card">
+
+<h3>Settings</h3>
+
+<input id="price" placeholder="Price per Litre">
+<input id="expense" placeholder="Total Expense">
+<input id="cash" placeholder="Cash at Hand">
+
+</div>
+
+
+<button onclick="calculate()" class="btn">
+Calculate
+</button>
+
+
+<div class="card result">
+
+<p id="pump1"></p>
+<p id="pump2"></p>
+<p id="litres"></p>
+<p id="sales"></p>
+<p id="bank"></p>
+
+</div>
+
+
+<div id="varianceBox" class="variance">
+
+<h2 id="varianceText"></h2>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
