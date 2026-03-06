@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="/static/style.css">
+
+<title>Fuel Variance</title>
+
+</head>
+
+<body>
+
+<div class="app">
+
+<h1>Fuel Sales</h1>
+
+<form method="POST">
+
+<div class="card">
+
+<h3>Pump 1</h3>
+
+<input name="p1_open" placeholder="Opening Reading" required>
+<input name="p1_close" placeholder="Closing Reading" required>
+
+</div>
+
+
+<div class="card">
+
+<h3>Pump 2</h3>
+
+<input name="p2_open" placeholder="Opening Reading" required>
+<input name="p2_close" placeholder="Closing Reading" required>
+
+</div>
+
+
+<div class="card">
+
+<h3>Settings</h3>
+
+<input name="price" placeholder="Price per Litre" required>
+<input name="expense" placeholder="Total Expense" required>
+<input name="cash" placeholder="Cash at Hand" required>
+
+</div>
+
+
+<button class="btn">Calculate</button>
+
+</form>
+
+
+{% if result %}
+
+<div class="card result">
+
+<p>Pump1 Litres: <b>{{result.pump1}}</b></p>
+<p>Pump2 Litres: <b>{{result.pump2}}</b></p>
+
+<p>Total Litres: <b>{{result.litres}}</b></p>
+<p>Sales Amount: <b>{{result.sales}}</b></p>
+
+<p>Cash To Bank: <b>{{result.bank}}</b></p>
+
+</div>
+
+
+<div class="variance {{status}}">
+
+<h2>Variance</h2>
+
+<h1>{{variance}}</h1>
+
+</div>
+
+{% endif %}
+
+</div>
+
+</body>
+</html>
